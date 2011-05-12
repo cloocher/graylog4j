@@ -1,6 +1,6 @@
 = Greylog4j
 
-Greylog4j is a log4j appender to send log messages to [Graylog2 server](http://www.graylog2.org/).
+Greylog4j is a log4j appender to send log messages to {Graylog2 server}[http://www.graylog2.org]
 
 = Build
 
@@ -36,8 +36,6 @@ log4j.rootLogger=INFO, greylog
     <appender-ref ref="greylog"/>
 </root>
     
-= License
+= Copyright
 
-see LICENSE file for full license
-
-Copyright 2011 Gene Drabkin
+Copyright (c) 2011 Gene Drabkin. See LICENSE for details.
