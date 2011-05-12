@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.greylog.log</groupId>
 	<artifactId>greylog4j</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3-SNAPSHOT</version>
 	<name>greylog4j</name>
 	<description>Greylog2 Java appender for log4j</description>
 	<licenses>
