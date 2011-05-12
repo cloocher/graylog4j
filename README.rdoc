@@ -12,6 +12,7 @@ mvn assembly:assembly
 
 log4j.appender.greylog=org.greylog.log.GreylogAppander
 log4j.appender.greylog.greylogHost=123.45.678.9
+log4j.appender.greylog.greylogPort=12201
 log4j.appender.greylog.host=mini.me.com
 log4j.appender.greylog.layout=org.apache.log4j.PatternLayout
 log4j.appender.greylog.additionalFields={'environment':'QA','application':'BigMama'}
@@ -22,7 +23,8 @@ log4j.rootLogger=INFO, greylog
 == log4j.xml
 
 <appender name="greylog" class="org.greylog.log.GreylogAppander">
-    <param name="graylogHost" value="123.45.678.9"/>
+    <param name="greylogHost" value="123.45.678.9"/>
+    <param name="greylogPort" value="12201"/>
     <param name="host" value="mini.me.com"/>
     <param name="additionalFields" value='{"environment":"QA","application":"BigMama"}'/>
     <layout class="org.apache.log4j.PatternLayout">
@@ -31,7 +33,11 @@ log4j.rootLogger=INFO, greylog
 </appender>
 ...
 <root>
-    <appender-ref ref="graylog"/>
+    <appender-ref ref="greylog"/>
 </root>
     
-    
+= License
+
+see LICENSE file for full license
+
+Copyright 2011 Gene Drabkin
