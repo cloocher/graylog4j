@@ -1,14 +1,51 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.greylog.log</groupId>
 	<artifactId>greylog4j</artifactId>
 	<version>0.0.2-SNAPSHOT</version>
 	<name>greylog4j</name>
 	<description>Greylog2 Java appender for log4j</description>
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 	<scm>
 		<connection>scm:git:git://github.com/cloocher/greylog4j.git</connection>
 		<url>scm:git:git://github.com/cloocher/greylog4j.git</url>
 	</scm>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<repositories>
+		<repository>
+			<id>cloudera</id>
+			<url>https://repository.cloudera.com/content/repositories/releases</url>
+		</repository>
+		<repository>
+			<id>Codehaus</id>
+			<url>http://repository.codehaus.org/</url>
+		</repository>
+		<repository>
+			<id>maven2-repository.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>maven-repository.java.net</id>
+			<name>Java.net Maven 1 Repository (legacy)</name>
+			<url>http://download.java.net/maven/1</url>
+			<layout>legacy</layout>
+		</repository>
+		<repository>
+			<id>file-based-repo-for-external-libs</id>
+			<url>file://${basedir}/lib</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>log4j</groupId>
@@ -60,4 +97,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	<developers>
+		<developer>
+			<id>cloocher</id>
+			<name>Gene Drabkin</name>
+			<email>gene.drabkin@gmail.com</email>
+			<timezone>-8</timezone>
+		</developer>
+	</developers>
 </project>
