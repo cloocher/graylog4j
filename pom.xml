@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.greylog.log</groupId>
-	<artifactId>greylog4j</artifactId>
+	<groupId>org.graylog.log</groupId>
+	<artifactId>graylog4j</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
-	<name>greylog4j</name>
-	<description>Greylog2 Java appender for log4j</description>
+	<name>graylog4j</name>
+	<description>Graylog2 Java appender for log4j</description>
 	<licenses>
 		<license>
 			<name>Apache License 2.0</name>
@@ -13,8 +13,8 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git:git://github.com/cloocher/greylog4j.git</connection>
-		<url>scm:git:git://github.com/cloocher/greylog4j.git</url>
+		<connection>scm:git:git://github.com/cloocher/graylog4j.git</connection>
+		<url>scm:git:git://github.com/cloocher/graylog4j.git</url>
 	</scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

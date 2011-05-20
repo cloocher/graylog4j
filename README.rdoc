@@ -1,6 +1,6 @@
-= Greylog4j
+= Graylog4j
 
-Greylog4j is a log4j appender to send log messages to {Graylog2 server}[http://www.graylog2.org]
+Graylog4j is a log4j appender to send log messages to {Graylog2 server}[http://www.graylog2.org]
 
 = Build
 
@@ -10,21 +10,21 @@ Greylog4j is a log4j appender to send log messages to {Graylog2 server}[http://w
 
 == log4j.properties
 
-    log4j.appender.greylog=org.greylog.log.GreylogAppander
-    log4j.appender.greylog.greylogHost=123.45.678.9
-    log4j.appender.greylog.greylogPort=12201
-    log4j.appender.greylog.host=mini.me.com
-    log4j.appender.greylog.layout=org.apache.log4j.PatternLayout
-    log4j.appender.greylog.additionalFields={'environment':'QA','application':'BigMama'}
-    log4j.appender.greylog.layout.ConversionPattern=%d %-5p %F:%L - %m%n
+    log4j.appender.graylog=org.graylog.log.GraylogAppander
+    log4j.appender.graylog.graylogHost=123.45.678.9
+    log4j.appender.graylog.graylogPort=12201
+    log4j.appender.graylog.host=mini.me.com
+    log4j.appender.graylog.layout=org.apache.log4j.PatternLayout
+    log4j.appender.graylog.additionalFields={'environment':'QA','application':'BigMama'}
+    log4j.appender.graylog.layout.ConversionPattern=%d %-5p %F:%L - %m%n
     ...
-    log4j.rootLogger=INFO, greylog
+    log4j.rootLogger=INFO, graylog
 
 == log4j.xml
 
-    <appender name="greylog" class="org.greylog.log.GreylogAppander">
-        <param name="greylogHost" value="123.45.678.9"/>
-        <param name="greylogPort" value="12201"/>
+    <appender name="graylog" class="org.graylog.log.GraylogAppander">
+        <param name="graylogHost" value="123.45.678.9"/>
+        <param name="graylogPort" value="12201"/>
         <param name="host" value="mini.me.com"/>
         <param name="additionalFields" value='{"environment":"QA","application":"BigMama"}'/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -33,7 +33,7 @@ Greylog4j is a log4j appender to send log messages to {Graylog2 server}[http://w
     </appender>
     ...
     <root>
-        <appender-ref ref="greylog"/>
+        <appender-ref ref="graylog"/>
     </root>
     
 = Copyright

@@ -11,8 +11,8 @@ import java.util.zip.GZIPOutputStream;
 
 import org.apache.log4j.Logger;
 
-public class GreylogClient {
-  private static final Logger logger = Logger.getLogger(GreylogClient.class);
+public class GraylogClient {
+  private static final Logger logger = Logger.getLogger(GraylogClient.class);
 
   private static final int DEFAULT_PORT = 12201;
   public static final int MAX_CHUNK_SIZE = 1420;
@@ -22,7 +22,7 @@ public class GreylogClient {
   private InetAddress host;
   private int port;
 
-  public GreylogClient(String host, int port) {
+  public GraylogClient(String host, int port) {
     try {
       this.host = InetAddress.getByName(host);
       this.port = port > 0 ? port : DEFAULT_PORT;

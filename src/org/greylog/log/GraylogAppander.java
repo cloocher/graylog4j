@@ -10,8 +10,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggingEvent;
 import org.codehaus.jackson.map.ObjectMapper;
 
-public class GreylogAppander extends AppenderSkeleton {
-  private static final Logger log = Logger.getLogger(GreylogAppander.class);
+public class GraylogAppander extends AppenderSkeleton {
+  private static final Logger log = Logger.getLogger(GraylogAppander.class);
 
   private static final int SHORT_MESSAGE_LENGTH = 250;
   private static final String GELF_VERSION = "1.0";
@@ -26,7 +26,7 @@ public class GreylogAppander extends AppenderSkeleton {
   private static final String FILE = "file";
   private static final String LINE = "line";
 
-  private GreylogClient greylogClient;
+  private GraylogClient greylogClient;
   private int greylogPort;
   private String greylogHost;
   private String host;
@@ -35,7 +35,7 @@ public class GreylogAppander extends AppenderSkeleton {
 
   @Override
   public void activateOptions() {
-    greylogClient = new GreylogClient(greylogHost, greylogPort);
+    greylogClient = new GraylogClient(greylogHost, greylogPort);
   }
 
   @Override
