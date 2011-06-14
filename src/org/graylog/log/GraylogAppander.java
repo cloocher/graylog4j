@@ -1,4 +1,4 @@
-package org.greylog.log;
+package org.graylog.log;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -26,16 +26,16 @@ public class GraylogAppander extends AppenderSkeleton {
   private static final String FILE = "file";
   private static final String LINE = "line";
 
-  private GraylogClient greylogClient;
-  private int greylogPort;
-  private String greylogHost;
+  private GraylogClient graylogClient;
+  private int graylogPort;
+  private String graylogHost;
   private String host;
-  private String facility = "unknown";
+  private final String facility = "unknown";
   private Map<String, String> fields;
 
   @Override
   public void activateOptions() {
-    greylogClient = new GraylogClient(greylogHost, greylogPort);
+    graylogClient = new GraylogClient(graylogHost, graylogPort);
   }
 
   @Override
@@ -43,7 +43,7 @@ public class GraylogAppander extends AppenderSkeleton {
     try {
       Map<String, Object> map = createMessageMap(event);
       if (map != null) {
-        greylogClient.sendMessage(new ObjectMapper().writeValueAsString(map));
+        graylogClient.sendMessage(new ObjectMapper().writeValueAsString(map));
       }
     } catch (Exception ex) {
       log.warn("Failed to log " + event, ex);
@@ -91,19 +91,19 @@ public class GraylogAppander extends AppenderSkeleton {
   }
 
   public int getGraylogPort() {
-    return greylogPort;
+    return graylogPort;
   }
 
-  public void setGraylogPort(int greylogPort) {
-    this.greylogPort = greylogPort;
+  public void setGraylogPort(int graylogPort) {
+    this.graylogPort = graylogPort;
   }
 
-  public String getGreylogHost() {
-    return greylogHost;
+  public String getGraylogHost() {
+    return graylogHost;
   }
 
-  public void setGreylogHost(String greylogHost) {
-    this.greylogHost = greylogHost;
+  public void setGraylogHost(String graylogHost) {
+    this.graylogHost = graylogHost;
   }
 
   public String getHost() {

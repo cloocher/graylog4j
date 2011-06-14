@@ -1,4 +1,4 @@
-package org.greylog.log;
+package org.graylog.log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
