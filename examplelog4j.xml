@@ -1,0 +1,12 @@
+    <appender name="graylog" class="org.graylog.log.GraylogAppander">
+        <param name="graylogHost" value="log.dev.jelastic.com"/>
+        <param name="graylogPort" value="12201"/>
+        <param name="host" value="ct103"/>
+        <param name="facility" value="pentaho"/>
+        
+        <param name="additionalFields" value='{"environment":"QA","application":"BigMama"}'/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p %F:%L - %m%n"/>
+        </layout>
+    </appender>
+
